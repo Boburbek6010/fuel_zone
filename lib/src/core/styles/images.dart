@@ -16,6 +16,12 @@ class AppImages {
     width: 18,
   );
 
+  // static final sendIcon = SvgPicture.asset(
+  //   'assets/icons/send_icon.svg',
+  //   height: 20,
+  //   width: 20,
+  // );
+
   static final hideIcon = SvgPicture.asset(
     'assets/icons/hide.svg',
     height: 7,
@@ -52,10 +58,10 @@ class AppImages {
     width: 72,
   );
 
-  static final logoPatent = Image.asset(
-    'assets/images/login/qizcha.png',
-    height: 254,
-    width: 254,
+  static final sendMap = Image.asset(
+    'assets/images/send_map.png',
+    height: 20,
+    width: 20,
     fit: BoxFit.cover,
   );
 

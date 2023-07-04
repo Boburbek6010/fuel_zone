@@ -30,10 +30,7 @@ class MainPage extends ConsumerWidget {
         children: pages,
       ),
       bottomNavigationBar: BottomNavigationBar(
-
-
         backgroundColor: AppColors.transparent,
-
         onTap: ref.read(mainProvider).changePageIndex,
         currentIndex: ref.read(mainProvider).pageIndex,
         items:  [

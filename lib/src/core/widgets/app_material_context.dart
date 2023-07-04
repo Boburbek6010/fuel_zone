@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../routes/app_route_names.dart';
 import '../routes/app_routes.dart';
+import '../styles/colors.dart';
 
 
 class AppMaterialContext extends StatefulWidget {
@@ -15,18 +16,13 @@ class _AppMaterialContextState extends State<AppMaterialContext> {
 
   @override
   Widget build(BuildContext context) => MaterialApp(
-    // locale: context.locale,
-    // supportedLocales: context.supportedLocales,
-    // localizationsDelegates: context.localizationDelegates,
     debugShowCheckedModeBanner: false,
     title: 'Fuel Zone',
     theme: ThemeData(
-      // Xurshidjon commentdan pastdagini oching
-      // scaffoldBackgroundColor: AppColors.white,
+      scaffoldBackgroundColor: AppColors.cEFEFEF,
       primarySwatch: Colors.blue,
     ),
-    // initialRoute: token != null && token!.isNotEmpty ? AppRouteNames.MAIN : AppRouteNames.SPLASH,
-    initialRoute: AppRouteNames.MAIN,
+    initialRoute: AppRouteNames.MAP,
     routes: AppRoutes.routes,
   );
 }
