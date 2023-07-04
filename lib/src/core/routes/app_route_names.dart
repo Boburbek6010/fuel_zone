@@ -4,4 +4,6 @@ import 'package:flutter/foundation.dart';
 class AppRouteNames {
   static const MAIN = '/main';
   static const HOME = '/home';
+  static const MAP = '/map';
+  static const PROFILE = '/profile';
 }
