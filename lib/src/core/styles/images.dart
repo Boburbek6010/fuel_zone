@@ -4,9 +4,6 @@ import 'package:flutter_svg/svg.dart';
 class AppImages {
   const AppImages._();
 
-  /// ! Bobur
-  // *** svg images
-
   static final logoSvg = SvgPicture.asset(
     'assets/images/login/logo.svg',
     height: 344,
@@ -45,8 +42,8 @@ class AppImages {
 
 
 
-  // !!!
-  // !!!
+
+
   // !!! images
 
   static final logoPng = Image.asset(
@@ -64,31 +61,6 @@ class AppImages {
 
 
 }
-
-// extension CustomSvg on SvgPicture {
-//   SvgPicture copyWith({
-//     double? width,
-//     double? height,
-//     BoxFit? fit,
-//     Color? color,
-//   }) {
-//     final picture = pictureProvider as ExactAssetPicture;
-//     if (colorFilter != null) {
-//       var colorString = '$colorFilter'.substring('$colorFilter'.indexOf('value: Color(') + 13);
-//       colorString = colorString.substring(0, colorString.indexOf(')),'));
-//       color ??= Color(int.parse(colorString));
-//     }
-//     return SvgPicture.asset(
-//       picture.assetName,
-//       width: width ?? this.width,
-//       height: height ?? this.height,
-//       fit: fit ?? this.fit,
-//       color: color,
-//     );
-//   }
-//
-//   String get path => (pictureProvider as ExactAssetPicture).assetName;
-// }
 
 extension Extension on Image {
   Image copyWith({

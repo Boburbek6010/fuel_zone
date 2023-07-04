@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fuel_zone/src/features/main/presentation/pages/home_page.dart';
-import 'package:fuel_zone/src/features/main/presentation/pages/main_page.dart';
+import 'package:fuel_zone/src/features/main/main_page.dart';
 
+import '../../features/main/presentation/home/page/home_page.dart';
 import 'app_route_names.dart';
 
 @immutable
