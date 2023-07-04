@@ -10,5 +10,5 @@ class AppRoutes {
   static final Map<String, Widget Function(BuildContext)> routes = {
     AppRouteNames.MAIN: (context) => const MainPage(),
     AppRouteNames.HOME: (context) => const HomePage(),
-  };
+  };//
 }
