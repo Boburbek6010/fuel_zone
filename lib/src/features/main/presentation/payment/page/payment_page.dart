@@ -5,6 +5,10 @@ class PaymentPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return  Scaffold(
+      body: Container(
+        color: Colors.blue,
+      ),
+    );
   }
 }
