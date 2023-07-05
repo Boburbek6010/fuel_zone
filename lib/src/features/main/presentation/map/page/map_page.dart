@@ -27,7 +27,6 @@ class MapPage extends ConsumerWidget {
               zoom: ref.read(mapController).zoom,
             ),
             onMapCreated: (GoogleMapController controller) {
-              ref.read(mapController).mapController.complete(controller);
               ref.read(mapController).googleMapController = controller;
             },
           ),

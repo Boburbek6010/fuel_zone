@@ -1,10 +1,4 @@
-
-
-import 'dart:ui';
-
 class OilStation {
-
-
 
   late int id;
   late String stationName;
