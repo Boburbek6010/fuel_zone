@@ -15,6 +15,7 @@ dependencies:
   l: ^4.0.2
   flutter_riverpod: ^2.3.6
   google_maps_flutter: ^2.3.1
+  geolocator: ^9.0.2
 
 dev_dependencies:
   flutter_test:

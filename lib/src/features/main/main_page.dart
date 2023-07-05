@@ -28,6 +28,7 @@ class MainPage extends ConsumerWidget {
 
     return Scaffold(
       body: PageView(
+        physics: const NeverScrollableScrollPhysics(),
         scrollDirection: Axis.horizontal,
         controller: ref.read(mainProvider).pageController,
         onPageChanged: ref.read(mainProvider).changePageIndex,

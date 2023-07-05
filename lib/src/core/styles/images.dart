@@ -17,6 +17,71 @@ class AppImages {
 
   // !!! images
 
+  static final profileProfile = SvgPicture.asset(
+    'assets/icons/profile_profile.svg',
+    height: 40,
+    width: 32,
+    fit: BoxFit.cover,
+  );
+
+  static final profileEdit = SvgPicture.asset(
+    'assets/icons/profile_edit.svg',
+    height: 20,
+    width: 20,
+    fit: BoxFit.cover,
+  );
+
+  static final profileAccount = SvgPicture.asset(
+    'assets/icons/profile_account.svg',
+    height: 20,
+    width: 20,
+    fit: BoxFit.cover,
+  );
+
+  static final profileHistoryData = SvgPicture.asset(
+    'assets/icons/profile_history_data.svg',
+    height: 20,
+    width: 20,
+    fit: BoxFit.cover,
+  );
+
+  static final profileCheck = SvgPicture.asset(
+    'assets/icons/profile_check.svg',
+    height: 20,
+    width: 20,
+    fit: BoxFit.cover,
+  );
+
+  static final profileGift = SvgPicture.asset(
+    'assets/icons/profile_gift.svg',
+    height: 20,
+    width: 20,
+    fit: BoxFit.cover,
+  );
+
+  static final profileLogOut = SvgPicture.asset(
+    'assets/icons/profile_log_out.svg',
+    height: 20,
+    width: 20,
+    fit: BoxFit.cover,
+  );
+
+  static final profileNotification = SvgPicture.asset(
+    'assets/icons/profile_notification.svg',
+    height: 20,
+    width: 20,
+    fit: BoxFit.cover,
+  );
+
+  static final profileSaved = SvgPicture.asset(
+    'assets/icons/profile_saved.svg',
+    height: 20,
+    width: 20,
+    fit: BoxFit.cover,
+  );
+
+
+
   static final barMap = SvgPicture.asset(
     'assets/icons/bottom_navigation_bar/bar_map.svg',
     height: 28,
@@ -107,6 +172,13 @@ class AppImages {
     'assets/icons/bottom_navigation_bar/bar_user.svg',
     height: 21,
     width: 18,
+    fit: BoxFit.cover,
+  );
+
+  static final sendMap = Image.asset(
+    'assets/images/send_map.png',
+    height: 20,
+    width: 20,
     fit: BoxFit.cover,
   );
 
