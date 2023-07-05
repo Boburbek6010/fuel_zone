@@ -22,7 +22,7 @@ class _AppMaterialContextState extends State<AppMaterialContext> {
       scaffoldBackgroundColor: AppColors.cEFEFEF,
       primarySwatch: Colors.blue,
     ),
-    initialRoute: AppRouteNames.PROFILE,
+    initialRoute: AppRouteNames.MAIN,
     routes: AppRoutes.routes,
   );
 }
