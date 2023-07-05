@@ -134,6 +134,9 @@ class _HomePageState extends ConsumerState<HomePage> {
                 ref.read(mainProvider).changePageIndex(1);
               },
               image: oil.id.isOdd  ? AppImages.zone1 :  AppImages.zone2,
+              onPressed: () {
+                ref.read(mainProvider).changePageIndex(1);
+              },
             );
           }
       ),
