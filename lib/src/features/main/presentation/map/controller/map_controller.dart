@@ -17,7 +17,7 @@ class MapController extends ChangeNotifier {
   late bool serviceEnabled;
   late LocationPermission permission;
   Position? currentLocation;
-  double zoom = 15.0;
+  double zoom = 16.0;
   Set<Marker> markers = {};
   bool isLoading = false;
   GoogleMapController? googleMapController;
