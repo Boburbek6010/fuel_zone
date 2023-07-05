@@ -34,7 +34,7 @@ List<Map<String, dynamic>> categoriesMock = [
   {
     "id": 4,
     "stationName": 'Mustang',
-    "address": '183 st. Seul, Tashkent, Uzbekistan',
+    "address": '109A st. Furqat, Chirchiq, Uzbekistan',
     "time": '30 min',
     "openOrClose": 'Open',
     "locationNumber1": '',
@@ -43,8 +43,8 @@ List<Map<String, dynamic>> categoriesMock = [
 
   {
     "id": 5,
+    "address": '14B st. Yuqori chirchiq, Tashkent, Uzbekistan',
     "stationName": 'Premium',
-    "address": '183 st. Seul, Tashkent, Uzbekistan',
     "time": '35 min',
     "openOrClose": 'Open',
     "locationNumber1": '',
@@ -53,8 +53,8 @@ List<Map<String, dynamic>> categoriesMock = [
 
   {
     "id": 6,
+    "address": '70 build. Labzak, Tashkent, Uzbekistan',
     "stationName": 'Uz Gaz Oil',
-    "address": '183 st. Seul, Tashkent, Uzbekistan',
     "time": '40 min',
     "openOrClose": 'Open',
     "locationNumber1": '',

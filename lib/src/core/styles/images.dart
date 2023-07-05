@@ -73,15 +73,6 @@ class AppImages {
     fit: BoxFit.cover,
   );
 
-  static final profileSaved = SvgPicture.asset(
-    'assets/icons/profile_saved.svg',
-    height: 20,
-    width: 20,
-    fit: BoxFit.cover,
-  );
-
-
-
   static final barMap = SvgPicture.asset(
     'assets/icons/bottom_navigation_bar/bar_map.svg',
     height: 28,
@@ -164,6 +155,14 @@ class AppImages {
     'assets/icons/car_icon.svg',
     height: 15,
     width: 15,
+    fit: BoxFit.cover,
+  );
+
+
+  static final profileSaved = Image.asset(
+    'assets/images/saved.png',
+    height: 20,
+    width: 20,
     fit: BoxFit.cover,
   );
 
