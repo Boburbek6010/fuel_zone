@@ -1,9 +1,12 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fuel_zone/src/core/styles/colors.dart';
 import 'package:fuel_zone/src/core/styles/images.dart';
 import 'package:fuel_zone/src/data/oil_station_model.dart';
 import 'package:fuel_zone/src/features/main/presentation/home/controller/home_controller.dart';
+import 'package:fuel_zone/src/features/main/presentation/map/page/map_page.dart';
 import '../../../main_vm.dart';
 import '../widget/fuel_item.dart';
 
@@ -130,11 +133,10 @@ class _HomePageState extends ConsumerState<HomePage> {
               address: oil.address,
               time: oil.time,
               openOrClose: oil.openOrClose,
-              go: () {
-                ref.read(mainProvider).changePageIndex(1);
-              },
               image: oil.id.isOdd  ? AppImages.zone1 :  AppImages.zone2,
               onPressed: () {
+                ref.read(homeVM).giveIndex(oil.id);
+                log("Index oil.id : ${oil.id}");
                 ref.read(mainProvider).changePageIndex(1);
               },
             );

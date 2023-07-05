@@ -8,9 +8,8 @@ class FuelItem extends StatelessWidget {
   final String address;
   final String time;
   final String openOrClose;
-  final VoidCallback go;
   final Image image;
-  const FuelItem({super.key, required this.onPressed, required this.oilStation, required this.address, required this.time, required this.openOrClose, required this.go, required this.image});
+  const FuelItem({super.key, required this.onPressed, required this.oilStation, required this.address, required this.time, required this.openOrClose, required this.image});
 
 
   @override
@@ -18,7 +17,7 @@ class FuelItem extends StatelessWidget {
     return Container(
       clipBehavior: Clip.antiAlias,
       margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-      height: 180,
+      height: 185,
       width: double.infinity,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
@@ -34,8 +33,8 @@ class FuelItem extends StatelessWidget {
               child: image,
             ),
             Expanded(
-              child: Container(
-                margin: const EdgeInsets.symmetric(horizontal: 10),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -47,7 +46,6 @@ class FuelItem extends StatelessWidget {
                           children: [
                             AppImages.star,
                             const Text('4,5', style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),),
-
                           ],
                         )
                       ],
@@ -80,7 +78,7 @@ class FuelItem extends StatelessWidget {
                             AppImages.call,
                             const SizedBox(width: 5),
                             ElevatedButton(
-                                onPressed: go,
+                                onPressed: onPressed,
                                 style: ElevatedButton.styleFrom(
                                     minimumSize: const Size(39, 24),
                                     backgroundColor: AppColors.cFF5722
@@ -91,7 +89,6 @@ class FuelItem extends StatelessWidget {
                         )
                       ],
                     )
-
                   ],
                 ),
               ),

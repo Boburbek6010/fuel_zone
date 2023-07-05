@@ -22,7 +22,7 @@ class MapController extends ChangeNotifier {
   bool isLoading = false;
   GoogleMapController? googleMapController;
   final Completer<GoogleMapController> mapController =
-      Completer<GoogleMapController>();
+  Completer<GoogleMapController>();
 
   List<OilStation> list = [];
 

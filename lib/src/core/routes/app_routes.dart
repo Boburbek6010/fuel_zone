@@ -10,7 +10,7 @@ import 'app_route_names.dart';
 class AppRoutes {
   const AppRoutes._();
   static final Map<String, Widget Function(BuildContext)> routes = {
-    AppRouteNames.MAIN: (context) =>  MainPage(),
+    AppRouteNames.MAIN: (context) =>  const MainPage(),
     AppRouteNames.HOME: (context) => const HomePage(),
     AppRouteNames.MAP: (context) => const MapPage(),
     AppRouteNames.PROFILE: (context) => const ProfilePage(),

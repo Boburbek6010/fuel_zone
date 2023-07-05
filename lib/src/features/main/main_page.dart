@@ -19,7 +19,7 @@ class MainPage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     ref.watch(mainProvider);
 
-    const pages = <Widget>[
+    const  pages = <Widget>[
       HomePage(),
       MapPage(),
       PaymentPage(),
