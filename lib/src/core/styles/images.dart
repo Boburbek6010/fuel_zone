@@ -205,8 +205,14 @@ class AppImages {
 
   static final call = Image.asset(
     'assets/images/call.png',
-    height: 22,
-    width: 22,
+    height: 23,
+    width: 23,
+  );
+
+  static final qrScanner = Image.asset(
+    'assets/images/qr_scaner.png',
+    height: 276,
+    width: 276,
   );
 
 }

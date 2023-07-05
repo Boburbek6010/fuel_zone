@@ -1,37 +1,59 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fuel_zone/src/core/styles/colors.dart';
 import 'package:fuel_zone/src/core/styles/images.dart';
+import 'package:fuel_zone/src/data/oil_station_model.dart';
+import 'package:fuel_zone/src/features/main/presentation/home/controller/home_controller.dart';
+import '../../../main_vm.dart';
+import '../widget/fuel_item.dart';
 
-class HomePage extends StatelessWidget {
+
+class HomePage extends ConsumerStatefulWidget {
   const HomePage({super.key});
 
   @override
+  ConsumerState<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends ConsumerState<HomePage> {
+
+  @override
+  void initState() {
+    Future.delayed(Duration.zero).then((value){
+      ref.read(homeVM).getAllCategories();
+    });
+    super.initState();
+  }
+
+
+  @override
   Widget build(BuildContext context) {
+    ref.watch(homeVM).getAllCategories;
     return Scaffold(
       backgroundColor: AppColors.cEFEFEF,
       appBar: AppBar(
         backgroundColor: AppColors.transparent,
         elevation: 0,
         bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(40),
+          preferredSize: const Size.fromHeight(50),
           child: Container(
             margin: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               children: [
                 Container(
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: AppColors.white
+                      borderRadius: BorderRadius.circular(10),
+                      color: AppColors.white
                   ),
                   height: 50,
                   child: TextField(
                     decoration: InputDecoration(
                       prefixIcon: Container(
-                          padding: const EdgeInsets.all(15),
-                          child: AppImages.search,
+                        padding: const EdgeInsets.all(15),
+                        child: AppImages.search,
                       ),
-                          hintText: 'Search',
-                          hintStyle: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                      hintText: 'Search',
+                      hintStyle: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
                       border: InputBorder.none,
                     ),
                   ),
@@ -90,6 +112,7 @@ class HomePage extends StatelessWidget {
                     AppImages.columnIcon,
                   ],
                 ),
+                const SizedBox(height: 10)
               ],
             ),
           ),
@@ -97,75 +120,27 @@ class HomePage extends StatelessWidget {
       ),
 
       body: ListView.builder(
-          itemCount: 1,
+          itemCount: ref.read(homeVM).oilList.length,
+          physics: const BouncingScrollPhysics(),
+          padding: const EdgeInsets.symmetric(vertical: 10),
           itemBuilder: (context, index){
-            return Container(
-              clipBehavior: Clip.antiAlias,
-              margin: const EdgeInsets.symmetric(horizontal: 20),
-              height: 180,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: AppColors.white
-              ),
-              child: Column(
-                children: [
-                  Expanded(
-                    child: AppImages.zone1,
-                  ),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                           const Text('Lukoil station', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),),
-                           Row(
-                             children: [
-                               AppImages.star,
-                               const Text('4,5', style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),),
-
-                             ],
-                           )
-                          ],
-                        ),
-                        const Row(
-                          children:  [
-                            Icon(
-                                Icons.location_on_outlined,
-                                color: AppColors.c888888,
-                                size: 15,
-                            ),
-                             Text(' 183 st. Seul, Tashkent, Uzbekistan', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: AppColors.c888888,),),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            AppImages.carIcon,
-                            const SizedBox(width: 5),
-                            const Text('15 min', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: AppColors.black,),),
-                            const SizedBox(width: 15),
-                            const Text('Open', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: AppColors.c6CE641,),),
-
-                            AppImages.call,
-                            ElevatedButton(
-                                onPressed: (){},
-                                child: const Text('Go!', style: TextStyle(color: AppColors.white, fontSize: 15),)
-                            )
-
-                          ],
-
-                        )
-
-                      ],
-                    ),
-                  )
-                ],
-              ),
+            OilStation oil = ref.read(homeVM).oilList[index];
+            return  FuelItem(
+              oilStation: oil.stationName,
+              address: oil.address,
+              time: oil.time,
+              openOrClose: oil.openOrClose,
+              go: () {
+                ref.read(mainProvider).changePageIndex(1);
+              },
+              image: oil.id.isOdd  ? AppImages.zone1 :  AppImages.zone2,
             );
           }
       ),
     );
   }
+
 }
+
+
+
