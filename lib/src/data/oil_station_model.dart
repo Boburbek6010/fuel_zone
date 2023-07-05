@@ -5,8 +5,9 @@ class OilStation {
   late String address;
   late String time;
   late String openOrClose;
-  late String locationNumber1;
-  late String locationNumber2;
+  late double locationNumber1;
+  late double locationNumber2;
+  late String image;
 
   OilStation({
     required this.id,
@@ -16,6 +17,7 @@ class OilStation {
     required this.openOrClose,
     required this.locationNumber1,
     required this.locationNumber2,
+    required this.image,
 
   });
 
@@ -27,6 +29,7 @@ class OilStation {
     openOrClose = json["openOrClose"];
     locationNumber1 = json["locationNumber1"];
     locationNumber2 = json["locationNumber2"];
+    image = json["image"];
   }
 
 

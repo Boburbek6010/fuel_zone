@@ -8,8 +8,9 @@ List<Map<String, dynamic>> categoriesMock = [
     "address": '103 st. Cho\'lpon, Tashkent vil, Uzbekistan',
     "time": '10 min',
     "openOrClose": 'Open',
-    "locationNumber1": '',
-    "locationNumber2": '',
+    "locationNumber1": 41.312786,
+    "locationNumber2": 69.527668,
+    "image":"assets/images/location_1.png"
   },
   {
     "id": 2,
@@ -17,8 +18,9 @@ List<Map<String, dynamic>> categoriesMock = [
     "address": '113 st. Aviasozlar, Tashkent vil, Uzbekistan',
     "time": '15 min',
     "openOrClose": 'Open',
-    "locationNumber1": '',
-    "locationNumber2": '',
+    "locationNumber1": 41.313374,
+    "locationNumber2": 69.529284,
+    "image":"assets/images/locatin_2.png"
   },
 
   {
@@ -27,8 +29,9 @@ List<Map<String, dynamic>> categoriesMock = [
     "address": '13 st. Furqat, Tashkent, Uzbekistan',
     "time": '20 min',
     "openOrClose": 'Open',
-    "locationNumber1": '',
-    "locationNumber2": '',
+    "locationNumber1": 41.311020,
+    "locationNumber2": 69.535245,
+    "image":"assets/images/location_1.png"
   },
 
   {
@@ -37,8 +40,9 @@ List<Map<String, dynamic>> categoriesMock = [
     "address": '109A st. Furqat, Chirchiq, Uzbekistan',
     "time": '30 min',
     "openOrClose": 'Open',
-    "locationNumber1": '',
-    "locationNumber2": '',
+    "locationNumber1": 41.311152,
+    "locationNumber2": 69.528560,
+    "image":"assets/images/locatin_2.png"
   },
 
   {
@@ -47,8 +51,9 @@ List<Map<String, dynamic>> categoriesMock = [
     "stationName": 'Premium',
     "time": '35 min',
     "openOrClose": 'Open',
-    "locationNumber1": '',
-    "locationNumber2": '',
+    "locationNumber1": 41.315751,
+    "locationNumber2": 69.529041,
+    "image":"assets/images/location_1.png"
   },
 
   {
@@ -57,8 +62,9 @@ List<Map<String, dynamic>> categoriesMock = [
     "stationName": 'Uz Gaz Oil',
     "time": '40 min',
     "openOrClose": 'Open',
-    "locationNumber1": '',
-    "locationNumber2": '',
+    "locationNumber1": 41.307386,
+    "locationNumber2": 69.527144,
+    "image":"assets/images/locatin_2.png"
   },
 
 ];
